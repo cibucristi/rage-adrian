@@ -129,10 +129,10 @@ CREATE TABLE `jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sanctions`
+-- Table structure for table `bans`
 --
 
-CREATE TABLE `sanctions` (
+CREATE TABLE `bans` (
   `ID` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `socialClubId` int(11) NOT NULL,
@@ -167,9 +167,9 @@ ALTER TABLE `jobs`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `sanctions`
+-- Indexes for table `bans`
 --
-ALTER TABLE `sanctions`
+ALTER TABLE `bans`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -195,9 +195,9 @@ ALTER TABLE `jobs`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `sanctions`
+-- AUTO_INCREMENT for table `bans`
 --
-ALTER TABLE `sanctions`
+ALTER TABLE `bans`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
