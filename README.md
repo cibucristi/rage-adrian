@@ -20,7 +20,7 @@ Salut, v-am pregatit un nou gamemode de RAGE.MP, o versiune mai avansata fata de
 
 Alte sisteme asemanatoare SAMP (RPG style) le veti descoperi descarcand acest gamemode. Am zis sa postez acest gamemod cu scopul de a ajuta incepatorii sa lucreze in TypeScript si totodata de a va incuraja sa va dezvoltati propriul vostru gamemode. Va puteti inspira din gamemode sau chiar sa-l continuati pe acesta.
 
-Imi pare rau pentru cod, nu este unul tocmai performant insa totusi as dori sa apreciati munca depusa, deoarece eram la inceput.
+Imi pare rau pentru cod, nu este unul tocmai performant insa totusi as dori sa apreciati munca depusa deoarece eram la inceput, mult spor sa aveti!
 
 Daca aveti probleme ma puteti contacta pe discord:
 
