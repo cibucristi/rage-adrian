@@ -2,6 +2,30 @@
 
 Salut, v-am pregatit un nou gamemode de RAGE.MP, o versiune mai avansata fata de primul meu gamemode postat pe internet.
 
+# Instalare:
+- descrcati ultimul **release**
+- dezarhivati arhiva intr-un folder gol
+- utilizand terminalul din VSC (Visual Studio Code) sau Command Promptul (CMD) ul oferit de Microsoft folositi npm install [AVETI NEVOIE DE NODEJS]
+- creati fisierul .env in folder unde puneti urmatorul lucru: 
+> [SWC]
+
+```
+PRODUCTION_MODE=false
+COMPILER_USE_SWC=true
+```
+
+> [TypeScript]
+
+```
+PRODUCTION_MODE=false
+COMPILER_USE_SWC=false
+```
+
+- iti creezi un db cu orice nume si actualizezi in src/server/class/database.ts
+- dupa ce ai modificat tot foloesti in terminal sau in cmd npm run build pentru a construi serverul.
+- ✔
+
+
 # UPDATES:
 
 - Sistem de inregistrare / logare + creare caracter.
@@ -17,6 +41,12 @@ Salut, v-am pregatit un nou gamemode de RAGE.MP, o versiune mai avansata fata de
 - Sistem de sanctiuni + ui personalizat (fara cod sursa), am pierdut sursa asa ca va puteti face voi un nou UI special.
 - A fost adaugata animatie + drawtext atunci cand mori (primesti respawn dupa cateva secunde).
 - Sistem de dialoguri asemanatoare ca pe samp (fara cod sursa), am pierdut sursa asa ca va puteti face voi un nou UI special.
+
+# EDIT:
+- Sistem de business-uri.
+- A fost adaugata sursa corecta de la chat.
+- Baza de date a fost adaugata in folderul database.
+
 
 Alte sisteme asemanatoare SAMP (RPG style) le veti descoperi descarcand acest gamemode. Am zis sa postez acest gamemod cu scopul de a ajuta incepatorii sa lucreze in TypeScript si totodata de a va incuraja sa va dezvoltati propriul vostru gamemode. Va puteti inspira din gamemode sau chiar sa-l continuati pe acesta.
 
