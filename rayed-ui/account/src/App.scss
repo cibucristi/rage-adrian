@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+/* -- COLORS -- */
+$rayed_color_hover: #c51f51;
+$rayed_color_server: #df255d;
+$rayed_color_focus: #ff004c4b;
+$rayed_color_input: rgba(88, 88, 88, 0.178);
+$rayed_color_white: #fff;
+$rayed_color_whitesmoke: #dddddd;
+$rayed_color_borders: #e6e6e63d;
+$rayed_color_smoke: #b8b8b8;
+
+/* --- CODE SCSS --- */
+body {
+    background: url('./7153748.jpg') no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.background {
+
+    background: rgb(223, 37, 93);
+    background: linear-gradient(151deg, rgba(223, 37, 93, 0.64) 0%, rgba(223, 37, 93, 0.18) 44%, rgba(223, 37, 93, 0.18) 51%, rgba(223, 37, 93, 0.64) 100%);
+    height: 100vh;
+    width: 100%;
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+
+        .card {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                color: $rayed_color_white;
+                font-size: 1.5em;
+            }
+
+            .subtitle {
+
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                color: $rayed_color_whitesmoke;
+                font-size: .9em;
+                margin-bottom: 1.5vh;
+            }
+
+            .input-section {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .icon {
+
+                    position: absolute;
+                    padding: 15px 10px 15px 10px;
+                    color: $rayed_color_whitesmoke;
+                }
+
+                input {
+
+                    padding: 15px 100px 15px 30px;
+                    margin-bottom: 1vh;
+                    border-radius: .5vh;
+                    outline: none;
+                    color: $rayed_color_whitesmoke;
+                    border: 1px $rayed_color_borders solid;
+                    background-color: $rayed_color_input;
+
+                    transition: 0.5s;
+
+                    &::placeholder {
+                        color: $rayed_color_whitesmoke;
+                    }
+
+                    &:focus {
+                        background-color: $rayed_color_focus;
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                button {
+
+                    margin-top: 2vh;
+                    padding: 15px 122px 15px 122px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    border-radius: .5vh;
+
+                    color: $rayed_color_whitesmoke;
+                    background-color: $rayed_color_server;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: $rayed_color_hover;
+                        box-shadow: none;
+                    }
+                }
+
+                .switch {
+
+                    color: $rayed_color_whitesmoke;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 400;
+                    font-size: .8em;
+                    margin-top: 1.5vh;
+                }
+
+                .click {
+
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-weight: 500;
+                    transition: 0.5s;
+
+                    &:hover {
+
+                        color: $rayed_color_smoke;
+                    }
+                }
+            }
+        }
+    }
+}

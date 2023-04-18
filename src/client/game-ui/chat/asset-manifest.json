@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2790744c.css",
+    "main.js": "./static/js/main.142fb263.js",
+    "static/media/SFUIText-Medium.ttf": "./static/media/SFUIText-Medium.e04b6fa4dc6937fba636.ttf",
+    "static/media/SFPRegular.otf": "./static/media/SFPRegular.d1f5e6e16dd4f75c3950.otf",
+    "static/media/SegoeUI.ttf": "./static/media/SegoeUI.45472284dc36b2486ce2.ttf",
+    "index.html": "./index.html",
+    "main.2790744c.css.map": "./static/css/main.2790744c.css.map",
+    "main.142fb263.js.map": "./static/js/main.142fb263.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2790744c.css",
+    "static/js/main.142fb263.js"
+  ]
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+$rayed_color_server: #df255d;
+$rayed_color_input: rgba(255, 0, 81, 0.445);
+
+@font-face {
+    font-family: 'Chat', sans-serif;
+    src: url('./FontsFree-Net-SFProDisplay-Regular.ttf');
+}
+
+body {
+
+    background: url('./7153748.jpg') no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.container {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 40px 20px 40px 20px;
+
+    .messages {
+
+        display: flex;
+        flex-direction: column;
+        max-height: 150px;
+        overflow: auto;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+
+            visibility: hidden;
+
+            &:hover {
+                scrollbar-width: thin;
+            }
+        }
+
+        .message {
+
+            color: #fff;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    .input-section {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+
+            margin-top: 1vh;
+            padding: 8px 35px 8px 10px;
+            width: 350px;
+            border-radius: .2vh;
+            border: none;
+            outline: none;
+
+            color: #fff;
+            background-color: $rayed_color_input;
+            font-family: 'Chat', sans-serif;
+
+            &::placeholder {
+
+                color: #fff;
+            }
+        }
+
+        .icon {
+
+            color: #fff;
+            background-color: $rayed_color_input;
+            padding: 7px;
+            margin-top: .9vh;
+            margin-left: 1vh;
+            border-top-right-radius: .3vh;
+            border-bottom-right-radius: .3vh;
+        }
+    }
+}

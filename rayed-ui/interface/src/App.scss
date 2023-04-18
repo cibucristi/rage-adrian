@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+$rayed_color_server: #df255d;
+
+.container {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .top-section {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5vh 3.5vh 2vh 3.5vh;
+
+        .safezone-section {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5vh;
+
+            .safe-text {
+
+                background-color: #df255db7;
+                padding: 3px 6px 4px 7px;
+                border-radius: .3vh;
+                color: #fff;
+                font-family: 'Barlow', sans-serif;
+                font-size: .75em;
+                font-weight: 400;
+            }
+        }
+
+        .id-section {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5vh;
+
+            .id-text {
+
+                font-family: 'Montserrat', sans-serif;
+                font-size: .8em;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .icon {
+
+                margin-right: .5vh;
+                color: $rayed_color_server;
+            }
+        }
+
+        .players-section {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5vh;
+
+            .players-text {
+
+                font-family: 'Montserrat', sans-serif;
+                font-size: .8em;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .icon {
+
+                margin-right: .5vh;
+                font-size: 1em;
+                color: $rayed_color_server;
+            }
+        }
+
+        .clock-section {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: .5vh;
+
+            .clock-text {
+
+                font-family: 'Montserrat', sans-serif;
+                font-size: .8em;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .icon {
+
+                margin-right: .5vh;
+                color: $rayed_color_server;
+            }
+        }
+    }
+
+    .gun-section {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4vh;
+        margin-top: 2vh;
+
+        .gun-name {
+
+            color: #fff;
+            font-family: 'Barlow', sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+        }
+    }
+
+    .ammo-section {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4vh;
+        margin-top: .5vh;
+
+        .icon {
+
+            color: $rayed_color_server;
+        }
+
+        .ammo-text {
+
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9em;
+            font-weight: 500;
+        }
+    }
+
+    .center-section {
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        flex-direction: column;
+        padding-right: 3.8vh;
+
+        .cash {
+
+            font-family: 'Barlow', sans-serif;
+            font-size: 1.2em;
+            font-weight: 400;
+
+            color: #fff;
+            margin-bottom: 1vh;
+        }
+
+        .bank {
+
+            font-family: 'Barlow', sans-serif;
+            font-size: .9em;
+            font-weight: 400;
+            color: #fff;
+            margin-right: .1vh;
+        }
+    }
+
+    .bottom-section {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1.7vh 3.7vh 0vh 0vh;
+
+        .icon {
+
+            font-size: 1.2em;
+            color: #df255da4;
+            margin-left: .5vh;
+        }
+    }
+}

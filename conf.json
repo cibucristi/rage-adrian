@@ -1,0 +1,10 @@
+{
+	"maxplayers" : 100,
+	"name" : "RAYED.MP", 
+	"gamemode" : "RPG", 
+	"stream-distance" : 500.0,
+	"announce" : false,
+	"bind" : "127.0.0.1",
+	"port" : 22005,
+	"language" : "RO"
+}
