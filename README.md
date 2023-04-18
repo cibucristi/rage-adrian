@@ -23,6 +23,25 @@ COMPILER_USE_SWC=false
 
 - iti creezi un db cu orice nume si actualizezi in src/server/class/database.ts
 - dupa ce ai modificat tot foloesti in terminal sau in cmd npm run build pentru a construi serverul.
+- o sa ti se creeze un folder cu numele dist unde vei fii nevoit sa pui server-files de la RAGE:MP, le poti gasii in folderul unde ai instalat clientul.
+
+### ⚠ Atentie:
+Daca nu gasesti folderul server-files in folderul clientului deschide config.xml si schimba din:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<channel>prerelease</channel>
+```
+
+|
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<channel>prerelease_server</channel>
+```
+
+Dupa ruleaza updater.exe, asteapta si dupa ce ti-a aparut clientul ia fisierele din server-files si urmeaza ultimul pas. [!] Pe urma actualizeaza din nou config.xml in cel normal.
+
 - ✔
 
 
