@@ -2,6 +2,30 @@
 
 Salut, v-am pregatit un nou gamemode de RAGE.MP, o versiune mai avansata fata de primul meu gamemode postat pe internet.
 
+# Instalare:
+- descrcati ultimul **release**
+- dezarhivati arhiva intr-un folder gol
+- utilizand terminalul din VSC (Visual Studio Code) sau Command Promptul (CMD) ul oferit de Microsoft folositi npm install [AVETI NEVOIE DE NODEJS]
+- creati fisierul .env in folder unde puneti urmatorul lucru: 
+> [SWC]
+
+```
+PRODUCTION_MODE=false
+COMPILER_USE_SWC=true
+```
+
+> [TypeScript]
+
+```
+PRODUCTION_MODE=false
+COMPILER_USE_SWC=false
+```
+
+- iti creezi un db cu orice nume si actualizezi in src/server/class/database.ts
+- dupa ce ai modificat tot foloesti in terminal sau in cmd npm run build pentru a construi serverul.
+- ✔
+
+
 # UPDATES:
 
 - Sistem de inregistrare / logare + creare caracter.
