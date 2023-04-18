@@ -1,95 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Montserrat:wght@300;400;500;700&display=swap');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    user-select: none;
+@font-face {
+    font-family: 'Barlow';   
+    src: url(./assets/Barlow.ttf);
 }
-
-$rayed_color_server: #df255d;
-$rayed_color_input: rgba(255, 0, 81, 0.445);
 
 @font-face {
-    font-family: 'Chat', sans-serif;
-    src: url('./FontsFree-Net-SFProDisplay-Regular.ttf');
+    font-family: 'SF Pro';
+    src: url(./assets/SFPRegular.otf)
 }
 
-body {
 
-    background: url('./7153748.jpg') no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
-
-.container {
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-
-    padding: 40px 20px 40px 20px;
+.chat {
+    position: absolute;
+    top:10px;
+    left:10px;
+    width: 140vh;
+    height: calc(var(--pagesize) * 2.4vh);
 
     .messages {
+        position: relative;
+        margin-left: auto;
+        width: 99%;
+        height: 100%;
+        overflow: hidden;
+        outline: none;
 
-        display: flex;
-        flex-direction: column;
-        max-height: 150px;
-        overflow: auto;
-        scrollbar-width: thin;
+        ul {
+            position: absolute;
+            bottom: -10px;
+            width: 100%;
+            height: 104%;
+            overflow-y: auto;
 
-        &::-webkit-scrollbar {
+            &::-webkit-scrollbar {display:none;}
 
-            visibility: hidden;
+            display: flex;
+            flex-direction: column-reverse;
 
-            &:hover {
-                scrollbar-width: thin;
+            li {
+                list-style: none;
+                margin-left: -40px;
+                font-family: 'Barlow';
+                font-weight: bold;
+                font-size: calc(var(--fontsize) * 1.9px);
+                color:#fff;
+
+
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            
+                &:last-child {margin-top: 20px}
             }
         }
 
-        .message {
-
-            color: #fff;
-            font-family: 'Barlow', sans-serif;
-            font-weight: 500;
+        .addNewMessage {
+            animation: chatAddNewMessage 0.2s ease-out;
+            @keyframes chatAddNewMessage {
+                0% {
+                    transform: translateY(23px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+            }
         }
     }
 
-    .input-section {
+    .bar {
+        position: absolute;
+        bottom: -55px;
+        left:10px;
+        width: 70vh;
+        height: 46px;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background: rgba(0, 0, 0, 0.46);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 13px;
 
-        input {
+        animation: chatShowBar 0.3s ease-out;
 
-            margin-top: 1vh;
-            padding: 8px 35px 8px 10px;
-            width: 350px;
-            border-radius: .2vh;
-            border: none;
-            outline: none;
-
-            color: #fff;
-            background-color: $rayed_color_input;
-            font-family: 'Chat', sans-serif;
-
-            &::placeholder {
-
-                color: #fff;
+        @keyframes chatShowBar {
+            0% {
+                opacity: 0;
+                width: 50vh;
+                margin-left: -2vh;
             }
         }
 
-        .icon {
-
-            color: #fff;
-            background-color: $rayed_color_input;
-            padding: 7px;
-            margin-top: .9vh;
-            margin-left: 1vh;
-            border-top-right-radius: .3vh;
-            border-bottom-right-radius: .3vh;
+        input {
+            background-color: transparent;
+            outline: none;
+            border:none;
+            position: absolute;
+            font-size: 18px;
+            color:#fff;
+            left:10px;
+            bottom: 20%;
+            width: 83%;
+            height: 60%;
         }
+
+        input::selection {
+            background-color: rgba(35, 248, 117, 0.2);
+            color:#fff;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top:50%;
+            transform: translate(-10px, -50%);
+            text-align: center;
+            width: 70px;
+            height: 25px;
+
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 7px;
+        }
+
+        .chars {
+            position: absolute;
+            right: 0;
+            top:50%;
+            transform: translate(-10px, -50%);
+            text-align: center;
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+            font-family: 'SF Pro';
+
+            background: linear-gradient(265.3deg, rgba(255, 255, 255, 0.74) -4.5%, rgba(255, 255, 255, 0) 104.11%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }        
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+    .chat {
+        zoom: 65%;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 1001px) {
+    .chat {
+        zoom: 70%;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1101px) {
+    .chat {
+        zoom: 75%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1281px) {
+    .chat {
+        zoom: 77%;
+    }
+}
+
+@media (max-width: 1800px) and (min-width: 1401px) {
+    .chat {
+        zoom: 83.3%;
+    }
+}
+
+@media (max-width: 2000px) and (min-width: 1800px) {
+    .chat {
+        zoom: 100%;
+    }
+}
+
+@media (max-width: 3000px) and (min-width: 2000px) {
+    .chat {
+        zoom: 100%;
     }
 }
