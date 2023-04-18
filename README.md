@@ -42,6 +42,9 @@ COMPILER_USE_SWC=false
 - A fost adaugata animatie + drawtext atunci cand mori (primesti respawn dupa cateva secunde).
 - Sistem de dialoguri asemanatoare ca pe samp (fara cod sursa), am pierdut sursa asa ca va puteti face voi un nou UI special.
 
+# INFO:
+Inainte sa porniti serverul, va recomand sa mergeti in folderul discord acolo unde serverul este conectat la un bot de discord. In caz ca nu vreti sa faceti conectiunea dintre discord si serverul de RAGE.MP puteti sterge import-ul din fisierul index.ts. Daca doriti sa pastrati conectiunea cu discordul, mergeti in folderul discord si in fisierul index.js si modificati tokenul de mai jos cu tokenul botului vostru de discord. Pentru a crea un bot de discord puteti merge pe link-ul acesta: https://discord.com/developers
+
 # EDIT:
 - Sistem de business-uri.
 - A fost adaugata sursa corecta de la chat.
