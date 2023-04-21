@@ -14,7 +14,7 @@ import './scripts/serverJobs';
 import './scripts/serverBusiness';
 
 /* --- DISCORD --- */
-import './discord/index';
+//import './discord/index';
 
 /* --- JOBS --- */
 import './scripts/jobs/fisherman';

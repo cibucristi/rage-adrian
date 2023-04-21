@@ -8,7 +8,7 @@ export class Database {
             host: "127.0.0.1",
             user: "root",
             password: "",
-            database: "test"
+            database: "adrian"
         });
         this.connection.connect();
         this.connection.query("FLUSH TABLES");
