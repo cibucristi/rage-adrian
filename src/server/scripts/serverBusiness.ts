@@ -51,7 +51,7 @@ async function LoadServerBizz() {
             }
             loaded_component_bizz++;
         }
-        console.log(`[MYSQL]: Loaded business: ${loaded_component_bizz}`);
+        console.log(`\x1b[36m[MySQL]\x1b[0m \x1b[0mLoaded business: ${loaded_component_bizz}`);
     });
 }
 

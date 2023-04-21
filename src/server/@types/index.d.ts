@@ -53,11 +53,12 @@ declare global {
 
 		/* --- LICENSES --- */
 		licenses: {
-			[key: string]: {
-				activeHours: number;
-				suspendedHours: number;
-			};
-		};
+            [key: string]: {
+                status: "active" | "inactive" | "suspended";
+                expiration_date: number;
+				suspend_hours: number;
+            };
+        };
 
 
 		loginTimeout: NodeJS.Timeout;
@@ -73,7 +74,7 @@ declare global {
 				BestTorsoTexture: number;
 			};
 		};
-	}
+	}	
 }
 
 export { };

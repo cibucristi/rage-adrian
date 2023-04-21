@@ -46,13 +46,7 @@ export function select_player_database(player: PlayerMp, rows: any) {
 	player.times = timesValues;
 
 	/* --- Licente --- */
-	const licenses = {
-		driving: { activeHours: rows.driving_license_active, suspendedHours: rows.driving_license_suspended },
-		weapon: { activeHours: rows.weapon_license_active, suspendedHours: rows.weapon_license_suspended },
-		fly: { activeHours: rows.fly_license_active, suspendedHours: rows.fly_license_suspended },
-		boat: { activeHours: rows.boat_license_active, suspendedHours: rows.boat_license_suspended }
-	};
-	player.licenses = licenses;
+	player.licenses = JSON.parse(rows.licenses);
 
 	/* --- RESET --- */
 	player.staff = false;

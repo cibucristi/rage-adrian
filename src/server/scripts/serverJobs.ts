@@ -72,7 +72,7 @@ async function LoadServerJobs() {
             }
             loaded_component_jobs++;
         }
-        console.log(`[MYSQL]: Loaded jobs: ${loaded_component_jobs}`);
+        console.log(`\x1b[36m[MySQL]\x1b[0m \x1b[0mLoaded jobs: ${loaded_component_jobs}`);
     });
 }
 export const giveJobSalary = async (player: PlayerMp, jobid: any, skill: any) => {

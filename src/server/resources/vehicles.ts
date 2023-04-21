@@ -12,18 +12,18 @@ mp.events.add("playerEnterVehicle", (player: PlayerMp, vehicle: any, seat: any) 
     if (vehicleIsBike(vehicleName)) player.call(RAGE_CLIENT_EVENTS.REMOVE_CLIENT_HELMET);
 
     if (seat == 0) {
-
-        if (player.licenses.driving.activeHours == 0 && !vehicleIsABike(vehicleName) && !vehicleIsBoat(vehicleName) && !vehicleIsFly(vehicleName) && player.asset_dmv == false) {
+        console.log(player.asset_dmv);
+        if (player.licenses.driving_license.status == "inactive" || "suspended" && !vehicleIsABike(vehicleName) && !vehicleIsBoat(vehicleName) && !vehicleIsFly(vehicleName) && player.asset_dmv == true) {
             player.removeFromVehicle(); player.stopAnimation();
-            return sendError(player, "You don't have driving license.");
+            return sendError(player, "You don't have a driving license.");
         }
-        if (player.licenses.fly.activeHours == 0 && vehicleIsFly(vehicleName)) {
+        if (player.licenses.flying_license.status == "inactive" || "suspended" && vehicleIsFly(vehicleName)) {
             player.removeFromVehicle(); player.stopAnimation();
-            return sendError(player, "You don't have fly license.");
+            return sendError(player, "You don't have a flying license.");
         }
-        if (player.licenses.boat.activeHours == 0 && vehicleIsBoat(vehicleName)) {
+        if (player.licenses.boat_license.status == "inactive" || "suspended" && vehicleIsBoat(vehicleName)) {
             player.removeFromVehicle(); player.stopAnimation();
-            return sendError(player, "You don't have boat license.");
+            return sendError(player, "You don't have a boat license.");
         }
     }
 });

@@ -237,7 +237,8 @@ mp.events.add(RAGE_GENERAL_EVENTS.REMOVE_PLAYER_HEL_MET, (player: PlayerMp) => {
 mp.events.add(RAGE_GENERAL_EVENTS.START_PLAYER_DMV, (player: PlayerMp) => {
 
     if (player.asset_dmv == true) return;
-    if (player.licenses.driving.activeHours > 0 || player.licenses.driving.suspendedHours > 0) return sendError(player, "Licenta ta de condus este suspendata sau este deja activa.");
+    if (player.licenses.driving_license.status == "suspended") return sendError(player, `Your driving license is suspended for ${player.licenses.driving_license.suspend_hours} more ${player.licenses.driving_license.suspend_hours < 2?`hour`:`hours`}.`);
+    if (player.licenses.driving_license.expiration_date > 0 ) return sendError(player, "Your driving license is already active.");
     if (player.vehicle) return;
 
 
@@ -264,11 +265,11 @@ mp.events.add(RAGE_GENERAL_EVENTS.ENTER_PLAYER_CHECKPOINT_DMV, async (player: Pl
         switch (player.asset_dmv_step) {
 
             case 7: {
-                let licenseName: any = "driving";
+                let licenseName: any = "driving_license";
 
                 player.asset_dmv = false; player.asset_dmv_step = -1; player.asset_dmv_vehicle.destroy(); player.asset_dmv_vehicle = null;
                 player.call(RAGE_CLIENT_EVENTS.STOP_CLIENT_DMV); player.dimension = 0;
-                await license.addActiveHours(player, licenseName, 50);
+                await license.addActiveHours(player, licenseName, Math.floor(Date.now() / 1000));
                 setTimeout(() => {
                     SendMsg(player, COLORS.COLOR_SERVER, `Driving School: !{f9f9f9}Felicitari, examenul a luat sfarsit si ai intrat pe pozitia !{${COLORS.COLOR_SERVER}}Passed!{f9f9f9}.`);
                     SendMsg(player, COLORS.COLOR_SERVER, `Driving School: !{f9f9f9}Asta inseamna ca ai obtinut licenta de condus pentru 50 de ore.`);
