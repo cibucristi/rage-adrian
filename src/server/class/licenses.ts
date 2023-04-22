@@ -69,9 +69,16 @@ export class LicensesManager {
 		
 		SendMsg(player, 'f9f9f9', `-------- !{${COLORS.COLOR_SERVER}}${user.name}'s licenses!{f9f9f9} --------`);
 
-		let time = licenses.driving_license.expiration_date - Math.floor(Date.now() / 1000);
+		let driving_time = licenses.driving_license.expiration_date - Math.floor(Date.now() / 1000);
+		let weapon_time = licenses.weapon_license.expiration_date - Math.floor(Date.now() / 1000);
 
-		SendMsg(player, 'f9f9f9', `Driving License - (${Math.floor(time/86400)} days, ${Math.floor((time/3600) % 24)} hours, ${Math.floor(((time / 60) % 60))} minutes, ${Math.floor(time % 60)} seconds)`);
+		if(licenses.driving_license.suspend_hours > 0) SendMsg(player, 'f9f9f9', `Driving License - Suspended (${licenses.driving_license.suspend_hours} ${licenses.driving_license.suspend_hours>1?`hours`:`hour`})`);
+		else if(licenses.driving_license.status=="active") SendMsg(player, 'f9f9f9', `Driving License - Expires in ${Math.floor(weapon_time/86400)} days, ${Math.floor((weapon_time/3600) % 24)} hours, ${Math.floor(((weapon_time / 60) % 60))} minutes, ${Math.floor(weapon_time % 60)} seconds`);
+		else SendMsg(player, 'f9f9f9', `Driving License - Inactive.`)
+
+
+		SendMsg(player, 'f9f9f9', `Weapon License - (${Math.floor(weapon_time/86400)} days, ${Math.floor((weapon_time/3600) % 24)} hours, ${Math.floor(((weapon_time / 60) % 60))} minutes, ${Math.floor(weapon_time % 60)} seconds)`);
+
 		/*SendMsg(player, 'f9f9f9', `-------- !{${COLORS.COLOR_SERVER}}${user.name}'s licenses!{f9f9f9} --------`);
 		SendMsg(player, 'f9f9f9', `Driving License - ${licenses.driving_license.expiration_date > Math.floor(Date.now() / 1000) ? "Active" : licenses.driving.suspend_hours > 0 ? "Suspended" : "Expired"} (${licenses.driving_license.expiration_date > Math.floor(Date.now() / 1000) ? `${licenses.driving.expiration_date/86400} days, ${(licenses.driving.expiration_date/3600) % 24}, ${((licenses.driving.expiration_date / 60) % 60)} hours, ${licenses.driving.expiration_date % 60} seconds.` : licenses.driving.suspend_hours > 0 ? `${licenses.driving.suspend_hours} hours` : "none"})`);
 		SendMsg(player, 'f9f9f9', `Weapon License - ${licenses.weapon_license.expiration_date > Math.floor(Date.now() / 1000) ? "Active" : licenses.weapon.suspend_hours > 0 ? "Suspended" : "Expired"} (${licenses.weapon.expiration_date > Math.floor(Date.now() / 1000) ? `${licenses.weapon.expiration_date/86400} days, ${(licenses.weapon.expiration_date/3600) % 24}, ${((licenses.weapon.expiration_date / 60) % 60)} hours, ${licenses.weapon.expiration_date % 60} seconds.` : licenses.weapon.suspend_hours > 0 ? `${licenses.weapon.suspend_hours} hours` : "none"})`);

@@ -221,7 +221,7 @@ command.addCommand({
 		if (!id || !licenseName || !hours) {
 
 			sendUsage(player, '/agl <username/userID> <license name> <hours (0h - 300h)>');
-			return SendMsg(player, COLORS.COLOR_SERVER, "Licenses: !{f9f9f9}driving, weapon, gun, fly");
+			return SendMsg(player, COLORS.COLOR_SERVER, "Licenses: !{f9f9f9}driving, weapon, boat, flying");
 		}
 
 		const user: any = getNameByID(id);
@@ -229,7 +229,7 @@ command.addCommand({
 		if (!is_valid_license(licenseName)) {
 
 			sendError(player, "Invalid license type.");
-			return SendMsg(player, COLORS.COLOR_SERVER, "Licenses: !{f9f9f9}driving, weapon, gun, fly");
+			return SendMsg(player, COLORS.COLOR_SERVER, "Licenses: !{f9f9f9}driving, weapon, boat, flying");
 		}
 
 		if (parseInt(hours) < 0 || parseInt(hours) > 300) return sendError(player, "Invalid hours (0 - 300).");
