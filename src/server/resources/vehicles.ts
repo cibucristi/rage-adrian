@@ -13,15 +13,16 @@ mp.events.add("playerEnterVehicle", (player: PlayerMp, vehicle: any, seat: any) 
 
     if (seat == 0) {
         console.log(player.asset_dmv);
-        if (player.licenses.driving_license.status == "inactive" || "suspended" && !vehicleIsABike(vehicleName) && !vehicleIsBoat(vehicleName) && !vehicleIsFly(vehicleName) && player.asset_dmv == true) {
-            player.removeFromVehicle(); player.stopAnimation();
+        if ((player.licenses.driving_license.status == "inactive" || player.licenses.driving_license.status == "suspended") && !vehicleIsABike(vehicleName) && !vehicleIsBoat(vehicleName) && !vehicleIsFly(vehicleName) && player.asset_dmv == false) {
+            player.removeFromVehicle(); 
+            player.stopAnimation();
             return sendError(player, "You don't have a driving license.");
-        }
-        if (player.licenses.flying_license.status == "inactive" || "suspended" && vehicleIsFly(vehicleName)) {
+        }        
+        if ((player.licenses.flying_license.status == "inactive" || player.licenses.flying_license.status == "suspended") && vehicleIsFly(vehicleName)) {
             player.removeFromVehicle(); player.stopAnimation();
             return sendError(player, "You don't have a flying license.");
         }
-        if (player.licenses.boat_license.status == "inactive" || "suspended" && vehicleIsBoat(vehicleName)) {
+        if ((player.licenses.boat_license.status == "inactive" || player.licenses.boat_license.status == "suspended") && vehicleIsBoat(vehicleName)) {
             player.removeFromVehicle(); player.stopAnimation();
             return sendError(player, "You don't have a boat license.");
         }

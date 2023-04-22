@@ -168,7 +168,7 @@ mp.events.add(RAGE_GENERAL_EVENTS.START_VEHICLE_ENGINE, (player: PlayerMp) => {
             if (veh.getVariable("engine_status") == true) player.call(RAGE_CLIENT_EVENTS.SET_CLIENT_ENGINE_STATE, [false, player]);
             else player.call(RAGE_CLIENT_EVENTS.SET_CLIENT_ENGINE_STATE, [true, player]);
 
-            sendLocal(player, 'C2A2DA', 20, `* ${player.name} a ${veh.getVariable("engine_status") == true ? "pornit" : "oprit"} motorul vehiculului ${vehicleName}.`);
+            sendLocal(player, 'C2A2DA', 20, `* ${player.name} has ${veh.getVariable("engine_status") == true ? "started" : "turned off"} vehicle ${vehicleName}.`);
         }
     }
 });
@@ -269,7 +269,7 @@ mp.events.add(RAGE_GENERAL_EVENTS.ENTER_PLAYER_CHECKPOINT_DMV, async (player: Pl
 
                 player.asset_dmv = false; player.asset_dmv_step = -1; player.asset_dmv_vehicle.destroy(); player.asset_dmv_vehicle = null;
                 player.call(RAGE_CLIENT_EVENTS.STOP_CLIENT_DMV); player.dimension = 0;
-                await license.addActiveHours(player, licenseName, Math.floor(Date.now() / 1000));
+                await license.addActiveHours(player, licenseName, (Math.floor(Date.now() / 1000))+604800);
                 setTimeout(() => {
                     SendMsg(player, COLORS.COLOR_SERVER, `Driving School: !{f9f9f9}Felicitari, examenul a luat sfarsit si ai intrat pe pozitia !{${COLORS.COLOR_SERVER}}Passed!{f9f9f9}.`);
                     SendMsg(player, COLORS.COLOR_SERVER, `Driving School: !{f9f9f9}Asta inseamna ca ai obtinut licenta de condus pentru 50 de ore.`);
