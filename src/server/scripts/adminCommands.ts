@@ -235,6 +235,7 @@ command.addCommand({
 		if (parseInt(hours) < 0 || parseInt(hours) > 300) return sendError(player, "Invalid hours (0 - 300).");
 		const new_name: any = licenseName + "_license";
 		console.log(`the new name ${new_name}`)
+		console.log(`the hours: ${parseInt(hours)}`)
 		await license.setActiveHours(user, new_name, parseInt(hours));
 		await license.setSuspendedHours(user, new_name, 0);
 		sendAdmins(COLORS.COLOR_SERVER, `Notice: !{f9f9f9}Admin ${player.name} i-a setat lui ${user.name} licenta de ${licenseName} pentru ${parseInt(hours)} ore.`);

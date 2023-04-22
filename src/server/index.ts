@@ -5,6 +5,7 @@ import './resources/events';
 import './resources/react';
 import './resources/vehicles';
 import './resources/wasted';
+import './resources/debugs';
 
 import './scripts/playerCommands';
 import './scripts/adminCommands';

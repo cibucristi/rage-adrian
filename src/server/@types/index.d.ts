@@ -63,10 +63,6 @@ declare global {
 
 		loginTimeout: NodeJS.Timeout;
 	}
-	interface LicenseData {
-		activeHours: number;
-		suspendedHours: number;
-	}
 	interface TorsoData {
 		[key: string]: {
 			[key: number]: {

@@ -11,7 +11,7 @@ const vehicleBoat = ["dinghy", "dinghy2", "dinghy3", "dinghy4", "jetmax", "marqu
 const vehicleFlying = ["alphaz1", "avenger", "avenger2", "besra", "blimp", "blimp2", "blimp3", "bombushka", "cargoplane", "cargoplane2", "cuban800", "dodo", "duster", "howard", "hydra", "jet", "lazer", "luxor", "luxor2", "mammatus", "microlight", "miljet", "mogul", "molotok", "nimbus", "nokota", "pyro", "rogue", "seabreeze", "shamal", "starling", "strikeforce", "stunt", "titan", "tula", "velum", "velum2", "vestra", "volatol", "alkonost", "akula", "annihilator", "buzzard", "buzzard2", "cargobob", "cargobob2", "cargobob3", "cargobob4", "frogger", "frogger2", "havok", "hunter", "maverick", "savage", "seasparrow", "skylift", "supervolito", "supervolito2", "swift", "swift2", "valkyrie", "valkyrie2", "volatus", "annihilator2", "seasparrow2", "seasparrow3"]
 const vehicleBike = ["bmx", "cruiser", "fixter", "scorcher", "tribike", "tribike2", "tribike3", "bati", "bati2"];
 const vehiceBikes = ["bmx", "cruiser", "cruiser", "fixter", "scorcher", "tribike", "tribike2", "tribike3"];
-const licenseData = ["driving", "weapon", "boat", "fly"];
+const licenseData = ["driving", "weapon", "boat", "flying"];
 
 /* ---- FUNCTIONS ---- */
 export function select_player_database(player: PlayerMp, rows: any) {
