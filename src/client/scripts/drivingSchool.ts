@@ -20,9 +20,9 @@ const driving_school_checkpoints = [
 ]
 
 /* --- ASSETS --- */
-mp.blips.new(512, new mp.Vector3(-59.37861251831055, -616.3502807617188, 37.35678482055664), { name: 'Driving School', color: 69, shortRange: true });
+mp.blips.new(778, new mp.Vector3(-59.37861251831055, -616.3502807617188, 37.35678482055664), { name: 'Driving School', color: 69, shortRange: true });
 const colshape_driving_school = mp.colshapes.newSphere(-59.37861251831055, -616.3502807617188, 37.35678482055664, 1.5, 0);
-createActor(new mp.Vector3(-58.95973587036133, -616.5047607421875, 37.35678482055664), "s_m_m_ciasec_01", 70.14763641357422, 0, "Esti gata sa obti licenta de condus?");
+createActor(new mp.Vector3(-58.95973587036133, -616.5047607421875, 37.35678482055664), "s_m_m_ciasec_01", 70.14763641357422, 0, "Are you ready to obtain your driving license?");
 /* --- EVENTS --- */
 
 mp.events.add("playerEnterColshape", (shape) => {
@@ -64,7 +64,7 @@ mp.events.add(RAGE_CLIENT_EVENTS.STOP_CLIENT_DMV, () => {
 mp.keys.bind(0x45, true, function () {
     if (mp.players.local.getVariable("logged") == true && mp.players.local.getVariable("chat_active") == true && enter_colshape_driving_school == true) {
 
-        mp.events.call(RAGE_CLIENT_EVENTS.SHOW_CLIENT_INTERACT_MENU, 'Politist', 'Driving School', 'Esti pe cale sa obti permisul de conducere? Cu ajutorul acestuia poti conduce orice vehicul de orice categorie.', 'Incepe testul', 'Inchide', INTERACT_TYPES.TYPE_DRIVING_INTERACT);
+        mp.events.call(RAGE_CLIENT_EVENTS.SHOW_CLIENT_INTERACT_MENU, 'Examinator', 'Driving School', 'Are you ready to obtain your driving license? With this type of license you can drive every vehicle of any category anywhere you want.', 'Start Exam', 'Close', INTERACT_TYPES.TYPE_DRIVING_INTERACT);
     }
 });
 

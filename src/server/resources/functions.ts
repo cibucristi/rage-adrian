@@ -102,7 +102,7 @@ export function spawn_player(player: PlayerMp) {
 	player.health = 100;
 	player.model = mp.joaat(player.skin);
 
-	if (player.getVariable("registred") == true) SendMsg(player, COLORS.COLOR_SERVER, `Server: !{f9f9f9}Bine ai venit pe comunitatea noastra.`);
+	if (player.getVariable("registred") == true) SendMsg(player, COLORS.COLOR_SERVER, `Server: !{f9f9f9}Welcome on our community.`);
 	if (player.getVariable("registred") == true) player.setVariable("registred", false);
 
 	mp.events.call(RAGE_GENERAL_EVENTS.SET_PLAYER_HAIR, player, player.hair);

@@ -252,9 +252,9 @@ mp.events.add(RAGE_GENERAL_EVENTS.START_PLAYER_DMV, (player: PlayerMp) => {
         player.asset_dmv = true;
 
         SendMsg(player, COLORS.COLOR_SERVER, `(#) Driving School:`);
-        SendMsg(player, 'f9f9f9', 'Testul pentru licenta de condus tocmai a inceput.');
-        SendMsg(player, 'f9f9f9', `Apasa tasta !{${COLORS.COLOR_SERVER}}2!{f9f9f9} pentru a porni motorul vehiculului.`);
-        SendMsg(player, 'f9f9f9', 'Odata ce vehiculul este pornit, urmareste checkpoint-urile de pe harta.');
+        SendMsg(player, COLORS.COLOR_SERVER, 'DMV: !{#FFFFFF}The exam has begin, please follow all the instructions below.');
+        SendMsg(player, COLORS.COLOR_SERVER, `DMV: !{#FFFFFF}Press !{${COLORS.COLOR_SERVER}}2!{f9f9f9} to start the vehicle.`);
+        SendMsg(player, COLORS.COLOR_SERVER, `DMV: !{#FFFFFF}After you started the vehicle's engine, please follow all the checkpoints marked by the Server.`);
     }, 100);
 });
 
