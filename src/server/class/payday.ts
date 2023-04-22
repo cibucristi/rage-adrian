@@ -57,7 +57,24 @@ export class PaydayManager {
 			SendMsg(player, 'f9f9f9', `PayCheck: $${formatNumber(moneyReward)} | Bank Balance: $${formatNumber(player.bank)} | Respect Points: ${respect} | Respect Balance: ${player.respect}`);
 
 			for (const licenseType of ['Driving', 'Weapon', 'Flying', 'Boat'] as LicenseType[]) {
-				if(player.licenses[licenseType].expiration_date < Math.floor(Date.now() / 1000)) expiredLicenses.push(licenseType);
+				switch(licenseType) {
+					case 'Driving': {
+						if(player.licenses.driving_license.expiration_date < Math.floor(Date.now() / 1000)) expiredLicenses.push(licenseType);
+						break;
+					}
+					case 'Weapon': {
+						if(player.licenses.weapon_license.expiration_date < Math.floor(Date.now() / 1000)) expiredLicenses.push(licenseType);
+						break;
+					}
+					case 'Flying': {
+						if(player.licenses.flying_license.expiration_date < Math.floor(Date.now() / 1000)) expiredLicenses.push(licenseType);
+						break;
+					}
+					case 'Boat': {
+						if(player.licenses.boat_license.expiration_date < Math.floor(Date.now() / 1000)) expiredLicenses.push(licenseType);
+						break;
+					}
+				}
 			}
 			for (const licenseType of expiredLicenses) {
 				SendMsg(player, 'f9f9f9', `Licenta de ${licenseType} ti-a expirat!`);
