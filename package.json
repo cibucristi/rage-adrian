@@ -71,6 +71,7 @@
 		"node-wit": "^6.6.0",
 		"rage-rpc": "^0.4.0",
 		"react-icons": "^4.8.0",
+		"react-scripts": "^5.0.1",
 		"styled-components": "^5.3.9",
 		"whatwg-url": "^12.0.0",
 		"wit-js": "^0.0.1"

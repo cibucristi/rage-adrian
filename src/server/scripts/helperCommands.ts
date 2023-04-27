@@ -16,7 +16,7 @@ command.addCommand({
     permission: 'Staff',
     permissionValue: 0,
     handler: (player: PlayerMp, text: string) => {
-        if (!text) return sendUsage(player, "/hc <text>");
+        if (!text) return sendUsage(player, "/hc [text]");
         sendStaff(COLORS.COLOR_HELPERCHAT, `${player.admin ? "Admin" : "Helper"} Level (${player.admin ? player.admin : player.helper}) | ${player.name}: ${text}`);
     }
 });

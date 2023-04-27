@@ -46,7 +46,7 @@ setInterval(() => {
                     player.mute--;
                     if (player.mute == 1) {
                         player.mute = 0;
-                        SendMsg(player, COLORS.COLOR_SERVER, `Server: !{f9f9f9}Ai primit unmute automat.`);
+                        SendMsg(player, COLORS.COLOR_SERVER, `Server: !{f9f9f9}You have been unmuted.`);
                         await db.query(`update accounts set mute = 0 where username = ?`, [player.name]);
                     }
                 }
